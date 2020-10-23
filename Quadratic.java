@@ -111,7 +111,7 @@ double c){
 		/*A test client, tests findRoots()
 		*/
       Testing.testEquals("Test 1", findRoots(1, -2, 1), "x = 1.0");
-      Testing.testEquals("Test 2", findRoots(-1, 0, 1), "x = 1.0 and x = -1.0");
+      Testing.testEquals("Test 2", findRoots(-1, 0, 1), "x = -1.0 and x = 1.0");
       Testing.testEquals("Test 3", findRoots(-1, 3, -5), "");
 	}
 
