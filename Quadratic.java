@@ -55,6 +55,7 @@ double c){
 	public static void testPlusRoot(){
 		/*A test client, tests plusRoot()
 		*/
+      
 	}
 
 	public static double minusRoot(double a, double b, double c){
@@ -69,6 +70,9 @@ double c){
 	public static void testMinusRoot(){
 		/*A test client, tests minusRoot()
 		*/
+      Testing.testEquals("Test 1", minusRoot(1, -2, 1), 1);
+      Testing.testEquals("Test 2", minusRoot(-1, 0, 1), -1);
+      Testing.testEquals("Test 3", minusRoot(-1, 3, -5), NaN);
 	}
 
 	public static String findRoots(double a, double b, double c){
