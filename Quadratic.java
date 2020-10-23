@@ -77,7 +77,7 @@ double c){
 		findRoots(2.5, 5.0, 4.0) -> ""
 		*/
       if (Quadratic.discriminant())
-      return "b";
+      return "aab";
 	}
 
 	public static void testFindRoots(){
