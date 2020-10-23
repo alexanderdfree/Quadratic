@@ -21,16 +21,15 @@ double c){
 	public static double discriminant(double a, double b, double c){
 		/*Returns the discriminant given a, b, and c
 		*/
-      double d = ((Math.pow(b, 2))-(4.0 * a *c));
-      return d;
+      return ((Math.pow(b, 2))-(4.0 * a *c));
 	}
 
 	public static void testDiscriminant(){
 		/*A test client, tests discriminant()
       */
-      Testing.testEquals("Test 1", discriminant(1, -2, 1), 0);
-      Testing.testEquals("Test 2", discriminant(-1, 0, 1), 2);
-      Testing.testEquals("Test 3", discriminant(-1, 3, -5), -11);
+      Testing.testEquals("Test 1", discriminant(1, -2, 1), 0.0);
+      Testing.testEquals("Test 2", discriminant(-1, 0, 1), 4.0);
+      Testing.testEquals("Test 3", discriminant(-1, 3, -5), -11.0);
 
 	}
 	
@@ -55,14 +54,15 @@ double c){
 		
 	}*/
    public static double plusRoot(double a, double b, double c){
-		return (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
+		//if (numRoots(a, b, c) == 0) return "NaN";
+      return (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	}
    
 	public static void testPlusRoot(){
 		/*A test client, tests plusRoot()
 		*/
-      Testing.testEquals("Test 1", plusRoot(1, -2, 1), -1);
-      Testing.testEquals("Test 2", plusRoot(-1, 0, 1), 1);
+      Testing.testEquals("Test 1", plusRoot(1, -2, 1), 1.0);
+      Testing.testEquals("Test 2", plusRoot(-1, 0, 1), -1.0);
       Testing.testEquals("Test 3", plusRoot(-1, 3, -5), "NaN");
       
 	}
@@ -72,6 +72,7 @@ double c){
 		(-b - sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
 		If there is no root return NaN (read more about NaN here)
 		*/
+      //if (numRoots(a, b, c) == 0) return "NaN";
       return (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	
    }
@@ -79,8 +80,8 @@ double c){
 	public static void testMinusRoot(){
 		/*A test client, tests minusRoot()
 		*/
-      Testing.testEquals("Test 1", minusRoot(1, -2, 1), 1);
-      Testing.testEquals("Test 2", minusRoot(-1, 0, 1), -1);
+      Testing.testEquals("Test 1", minusRoot(1, -2, 1), 1.0);
+      Testing.testEquals("Test 2", minusRoot(-1, 0, 1), 1.0);
       Testing.testEquals("Test 3", minusRoot(-1, 3, -5), "NaN");
 	}
 
@@ -110,15 +111,15 @@ double c){
 		y = ax^2+bx+c
       
 		*/
-      double x = (-b)/(2 * a);
-      return x;
+      
+      return (-b)/(2 * a);
 	}
 
 	public static void testXSym(){
 		/*A test client, tests xSym().
 		*/
-      Testing.testEquals("Test 1", xSym(1, -2, 1), 1);
-      Testing.testEquals("Test 2", xSym(-1, 0, 1), 0);
+      Testing.testEquals("Test 1", xSym(1, -2, 1), 1.0);
+      Testing.testEquals("Test 2", xSym(-1, 0, 1), 0.0);
       Testing.testEquals("Test 3", xSym(-1, 3, -5), 1.5);
 	}
 
