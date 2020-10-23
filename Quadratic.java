@@ -35,7 +35,7 @@ double c){
 
 	public static void testNumRoots(){
 		/*A test client, tests numRoots().
-	}asdfja
+	}
 
 	public static double plusRoot(double a, double b, double c){
 		/*Finds the "plus" root of the quadratic given a, b, c,i.e. 		(-b + sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
@@ -90,12 +90,16 @@ double c){
 		y = ax^2+bx+c
       
 		*/
-      return a;
+      double x = (-b)/(2 * a);
+      return x;
 	}
 
 	public static void testXSym(){
 		/*A test client, tests xSym().
 		*/
+      Testing.testEquals("Test 1", xSym(1, -2, 1), 1);
+      Testing.testEquals("Test 2", xSym(-1, 0, 1), 0);
+      Testing.testEquals("Test 3", xSym(-1, 3, -5), 1.5);
 	}
 
 	public static double yVertex(double a, double b, double c){
