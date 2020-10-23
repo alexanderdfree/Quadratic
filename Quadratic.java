@@ -35,7 +35,7 @@ double c){
 
 	public static void testNumRoots(){
 		/*A test client, tests numRoots().
-	}
+	}asdfja
 
 	public static double plusRoot(double a, double b, double c){
 		/*Finds the "plus" root of the quadratic given a, b, c,i.e. 		(-b + sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
