@@ -10,7 +10,7 @@ double c){
 		Outputs:
 			return: the y-coordinate at x given a, b, c
 		*/
-      return a;
+      return a*Math.pow(x, 2)+b*x+c;
 	}
 
 	public static void testQuadY(){
@@ -37,6 +37,9 @@ double c){
 	public static int numRoots(double a, double b, double c){
 		/*Returns the number of roots given a, b, and c
 		*/
+      if (discriminant(a,b,c) < 0) return 0;
+      if (discriminant(a,b,c) == 0) return 1;
+      else return 2;
 	}
 
 	public static void testNumRoots(){
@@ -72,7 +75,7 @@ double c){
 		*/
       Testing.testEquals("Test 1", minusRoot(1, -2, 1), 1);
       Testing.testEquals("Test 2", minusRoot(-1, 0, 1), -1);
-      Testing.testEquals("Test 3", minusRoot(-1, 3, -5), NaN);
+      Testing.testEquals("Test 3", minusRoot(-1, 3, -5), "NaN");
 	}
 
 	public static String findRoots(double a, double b, double c){
@@ -86,8 +89,9 @@ double c){
 		findRoots(1.0, -4.0, 4.0) -> "x = 2.0"
 		findRoots(2.5, 5.0, 4.0) -> ""
 		*/
-      if (Quadratic.discriminant())
-      return "aab";
+      if (numRoots(a,b,c) == 0) return "";
+      if (numRoots(a,b,c) == 1) return "x = "+ (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
+      else return "x = " + (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a) + " and x = " + (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	}
 
 	public static void testFindRoots(){
