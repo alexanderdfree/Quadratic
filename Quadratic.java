@@ -21,11 +21,17 @@ double c){
 	public static double discriminant(double a, double b, double c){
 		/*Returns the discriminant given a, b, and c
 		*/
-      return c;
+      double d = ((Math.pow(b, 2))-(4.0 * a *c));
+      return d;
 	}
 
 	public static void testDiscriminant(){
 		/*A test client, tests discriminant()
+      */
+      Testing.testEquals("Test 1", discriminant(1, -2, 1), 0);
+      Testing.testEquals("Test 2", discriminant(-1, 0, 1), 2);
+      Testing.testEquals("Test 3", discriminant(-1, 3, -5), -11);
+
 	}
 	
 	public static int numRoots(double a, double b, double c){
