@@ -43,14 +43,17 @@ double c){
 	}
 
 	public static void testNumRoots(){
-		/*A test client, tests numRoots().
+		/*A test client, tests numRoots().*/
+      Testing.testEquals("Test 1", numRoots(1, -2, 1), 1);
+      Testing.testEquals("Test 2", numRoots(-1, 0, 1), 2);
+      Testing.testEquals("Test 3", numRoots(-1, 3, -5), 0);
 	}
 
-	public static double plusRoot(double a, double b, double c){
+	/*public static double plusRoot(double a, double b, double c){
 		/*Finds the "plus" root of the quadratic given a, b, c,i.e. 		(-b + sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
 		If there is no root return NaN (read more about NaN here)
-		*/
-	}
+		
+	}*/
    public static double plusRoot(double a, double b, double c){
 		return (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	}
@@ -58,6 +61,9 @@ double c){
 	public static void testPlusRoot(){
 		/*A test client, tests plusRoot()
 		*/
+      Testing.testEquals("Test 1", plusRoot(1, -2, 1), -1);
+      Testing.testEquals("Test 2", plusRoot(-1, 0, 1), 1);
+      Testing.testEquals("Test 3", plusRoot(-1, 3, -5), "NaN");
       
 	}
 
@@ -130,5 +136,14 @@ double c){
 	public static void main(String[] args){
 		/*The main method. When run, it should run your tests
 		*/
+      testPlusRoot();
+      testMinusRoot();
+      testQuadY();
+      testDiscriminant();
+      testNumRoots();
+      testYVertex();
+      testXSym();
+      testFindRoots();
 	}
+   
 }
