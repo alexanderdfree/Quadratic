@@ -1,3 +1,9 @@
+/* Quadratic.java is a program that is a toolkit for all your quadratic needs!
+
+made by  alex and edwin
+
+Last updated 10/30/20 */
+
 public class Quadratic{
 	public static double quadY(double x, double a, double b,
 double c){
@@ -97,13 +103,16 @@ double c){
 		findRoots(2.5, 5.0, 4.0) -> ""
 		*/
       if (numRoots(a,b,c) == 0) return "";
-      if (numRoots(a,b,c) == 1) return "x = "+ (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
-      else return "x = " + (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a) + " and x = " + (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
+      if (numRoots(a,b,c) == 1) return "x = "+ (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
+      else return "x = " + (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a) + " and x = " + (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	}
 
 	public static void testFindRoots(){
 		/*A test client, tests findRoots()
 		*/
+      Testing.testEquals("Test 1", findRoots(1, -2, 1), "x = 1.0");
+      Testing.testEquals("Test 2", findRoots(-1, 0, 1), "x = 1.0 and x = -1.0");
+      Testing.testEquals("Test 3", findRoots(-1, 3, -5), "");
 	}
 
 	public static double xSym(double a, double b, double c){
