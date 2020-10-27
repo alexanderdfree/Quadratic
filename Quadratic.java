@@ -44,7 +44,6 @@ public class Quadratic{
       Testing.testEquals("Test 1", discriminant(1, -2, 1), 0.0);
       Testing.testEquals("Test 2", discriminant(-1, 0, 1), 4.0);
       Testing.testEquals("Test 3", discriminant(-1, 3, -5), -11.0);
-
 	}
 	
 	public static int numRoots(double a, double b, double c){
@@ -104,7 +103,6 @@ public class Quadratic{
 		Outputs:
 			return: the negative root given a, b, c   */
       return (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
-	
    }
 
 	public static void testMinusRoot(){
@@ -153,8 +151,7 @@ public class Quadratic{
       */
       
       if (a == 0) return Double.NaN;
-      return (-b)/(2 * a);
-      
+      return (-b)/(2 * a); 
 	}
 
 	public static void testXSym(){
@@ -178,7 +175,6 @@ public class Quadratic{
       double x = (-b)/(2 * a);
       double y = a*(Math.pow(x,2)) + b*x + c;
       return y; 
-      
 	}
 	
 	public static void testYVertex(){
@@ -201,5 +197,3 @@ public class Quadratic{
       testXSym();
       testFindRoots();
 	}
-   
-}
