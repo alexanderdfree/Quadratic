@@ -22,14 +22,17 @@ double c){
 	public static void testQuadY(){
 		/*A test client, tests quadY()
 		*/
-      Testing.testEquals("Test 1", quadY(0, 1, -2, 1), 1.0);
-      Testing.testEquals("Test 2", quadY(3, -1, 0, 1), -8.0);
-      Testing.testEquals("Test 3", quadY(-3, -1, 3, -5), -11.0);
 	}
 	
 	public static double discriminant(double a, double b, double c){
 		/*Returns the discriminant given a, b, and c
-		*/
+	   Inputs:
+			double a: "a" in y = (b^2) - 4ac
+			double b: "b" in y = (b^2) - 4ac
+			double c: "c" in y = (b^2) - 4ac
+		Outputs:
+			return: the discriminants given a, b, c
+      */
       return ((Math.pow(b, 2))-(4.0 * a *c));
 	}
 
@@ -44,6 +47,13 @@ double c){
 	
 	public static int numRoots(double a, double b, double c){
 		/*Returns the number of roots given a, b, and c
+      Inputs:
+			double x: the x-coordinate
+			double a: "a" in y = ax^2 + bx + c
+			double b: "b" in y = ax^2 + bx + c
+			double c: "c" in y = ax^2 + bx + c
+		Outputs:
+			return: the y-coordinate at x given a, b, c
 		*/
       if (discriminant(a,b,c) < 0) return 0;
       if (discriminant(a,b,c) == 0) return 1;
@@ -118,8 +128,12 @@ double c){
 	public static double xSym(double a, double b, double c){
 		/*Find the x-coordinate of the line of symmetry of
 		y = ax^2+bx+c
-      
-		*/
+      Inputs:
+			double a: "a" in y = -b/2a
+			double b: "b" in y = -b/2a
+		Outputs:
+			return: the axis of symmetry at x given a and b
+      */
       
       return (-b)/(2 * a);
 	}
