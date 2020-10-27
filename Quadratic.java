@@ -23,7 +23,7 @@ public class Quadratic{
 		*/
       Testing.testEquals("Test 1", quadY(0, 1, -2, 1), 1.0);
       Testing.testEquals("Test 2", quadY(3, -1, 0, 1), -8.0);
-      Testing.testEquals("Test 3", quadY(-3, -1, 3, -5), -11.0);
+      Testing.testEquals("Test 3", quadY(-3, -1, 3, -5), -23.0);
 	}
 	
 	public static double discriminant(double a, double b, double c){
@@ -128,7 +128,7 @@ public class Quadratic{
 		*/
       if (a == 0 && b == 0 && c == 0) return "x = all values of x";
       if (a == 0.0 && b == 0.0) return "";
-      if (a == 0) return "x = " + (-c)/b;
+      if (a == 0) return "x = " + -c/b;
       if (numRoots(a,b,c) == 0) return "";
       if (numRoots(a,b,c) == 1) return "x = "+ (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
       else return "x = " + (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a) + ", x = " + (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
@@ -138,7 +138,7 @@ public class Quadratic{
 		/*A test client, tests findRoots()
 		*/
       Testing.testEquals("Test 1", findRoots(1, -2, 1), "x = 1.0");
-      Testing.testEquals("Test 2", findRoots(-1, 0, 1), "x = -1.0, and x = 1.0");
+      Testing.testEquals("Test 2", findRoots(-1, 0, 1), "x = -1.0, x = 1.0");
       Testing.testEquals("Test 3", findRoots(-1, 3, -5), "");
 	}
 
