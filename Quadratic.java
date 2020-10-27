@@ -87,7 +87,7 @@ double c){
 		*/
       Testing.testEquals("Test 1", plusRoot(1, -2, 1), 1.0);
       Testing.testEquals("Test 2", plusRoot(-1, 0, 1), -1.0);
-      Testing.testEquals("Test 3", plusRoot(-1, 3, -5), "NaN");
+      Testing.testEquals("Test 3", plusRoot(-1, 3, -5), Double.NaN);
       
 	}
 
