@@ -1,7 +1,5 @@
 /* Quadratic.java is a program that is a toolkit for all your quadratic needs!
-
 made by Alex and Edwin
-
 Last updated 10/30/20 */
 
 public class Quadratic{
@@ -121,9 +119,7 @@ double c){
       quadratic equation y = ax^2 + bx + c. Return a String 	
       containing this information, with the roots in order
 		from smallest to greatest.
-
 		Must work for all possible values of a, b, and c
-
 		Ex:
 		findRoots(-5.0, 10.0, 15.0) -> "x = -1.0 and x = 3.0"
 		findRoots(1.0, -4.0, 4.0) -> "x = 2.0"
