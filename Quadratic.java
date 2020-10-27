@@ -54,13 +54,10 @@ double c){
       Testing.testEquals("Test 3", numRoots(-1, 3, -5), 0);
 	}
 
-	/*public static double plusRoot(double a, double b, double c){
+	public static double plusRoot(double a, double b, double c){
 		/*Finds the "plus" root of the quadratic given a, b, c,i.e. 		(-b + sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
 		If there is no root return NaN (read more about NaN here)
-		
-	}*/
-   public static double plusRoot(double a, double b, double c){
-		//if (numRoots(a, b, c) == 0) return "NaN";
+      //if (numRoots(a, b, c) == 0) return "NaN";*/
       return (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	}
    
