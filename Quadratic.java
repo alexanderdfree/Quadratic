@@ -71,7 +71,13 @@ double c){
 		/*Finds the "plus" root of the quadratic given a, b, c,i.e. 
       (-b + sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
 		If there is no root return NaN (read more about NaN here)
-      //if (numRoots(a, b, c) == 0) return "NaN";*/
+      
+      /*Inputs:
+			double a: "a" in y = (-b+sqrt((b^2-4ac))/2a
+         double b: "b" in y = (-b+sqrt((b^2-4ac))/2a
+			double c: "c" in y = (-b+sqrt((b^2-4ac))/2a
+		Outputs:
+			return: the positive root given a, b, c   */
       return (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	}
    
