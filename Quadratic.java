@@ -196,4 +196,4 @@ public class Quadratic{
       testYVertex();
       testXSym();
       testFindRoots();
-	}
+	}}
