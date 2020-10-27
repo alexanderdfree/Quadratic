@@ -87,6 +87,12 @@ double c){
 		/*Find the "minus" root of the quadratic given a, b, c,i.e.
 		(-b - sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
 		If there is no root return NaN (read more about NaN here)
+      Inputs:
+			double a: "a" in y = ax^2 + bx + c
+			double b: "b" in y = ax^2 + bx + c
+			double c: "c" in y = ax^2 + bx + c
+		Outputs:
+			return: the y-coordinate at x given a, b, c
 		*/
       //if (numRoots(a, b, c) == 0) return "NaN";
       return (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
@@ -148,6 +154,13 @@ double c){
 
 	public static double yVertex(double a, double b, double c){
 		/*Find the y-coordinate of the vertex given a, b, c
+      Inputs:
+			double x: "x" in y = ax^2 - bx + c
+			double a: "a" in y = ax^2 - bx + c
+			double b: "b" in y = ax^2 - bx + c
+			double c: "c" in y = ax^2 - bx + c
+		Outputs:
+			return: the y value of the Vertex given a, b, c
 		*/
       double x = (-b)/(2 * a);
       double y = a*(Math.pow(x,2)) - b*x + c;
