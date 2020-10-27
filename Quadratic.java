@@ -3,8 +3,7 @@ made by Alex and Edwin
 Last updated 10/30/20 */
 
 public class Quadratic{
-	public static double quadY(double x, double a, double b,
-double c){
+	public static double quadY(double x, double a, double b, double c){
 		/*Returns the y-value for the given x, a, b, and c
 		Inputs:
 			double x: the x-coordinate
@@ -150,7 +149,9 @@ double c){
 			return: the axis of symmetry at x given a and b
       */
       
+      if (a == 0) return Double.NaN;
       return (-b)/(2 * a);
+      
 	}
 
 	public static void testXSym(){
