@@ -22,6 +22,9 @@ double c){
 	public static void testQuadY(){
 		/*A test client, tests quadY()
 		*/
+      Testing.testEquals("Test 1", quadY(0, 1, -2, 1), 1.0);
+      Testing.testEquals("Test 2", quadY(3, -1, 0, 1), -8.0);
+      Testing.testEquals("Test 3", quadY(-3, -1, 3, -5), -11.0);
 	}
 	
 	public static double discriminant(double a, double b, double c){
