@@ -88,12 +88,12 @@ double c){
 		(-b - sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
 		If there is no root return NaN (read more about NaN here)
       Inputs:
-			double a: "a" in y = ax^2 + bx + c
-			double b: "b" in y = ax^2 + bx + c
-			double c: "c" in y = ax^2 + bx + c
+			double a: "a" in x = -b - (sqrt(b^2 - 4ac))/2a
+			double b: "b" in x = -b - (sqrt(b^2 - 4ac))/2a
+			double c: "c" in x = -b - (sqrt(b^2 - 4ac))/2a
 		Outputs:
-			return: the y-coordinate at x given a, b, c
-		*/
+			return: the "minus root of the quadratic given a,b,c
+ 		*/
       //if (numRoots(a, b, c) == 0) return "NaN";
       return (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	
