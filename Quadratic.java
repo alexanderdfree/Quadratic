@@ -1,6 +1,6 @@
 /* Quadratic.java is a program that is a toolkit for all your quadratic needs!
 
-made by  alex and edwin
+made by Alex and Edwin
 
 Last updated 10/30/20 */
 
