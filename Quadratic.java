@@ -112,7 +112,7 @@ public class Quadratic{
 		*/
       Testing.testEquals("Test 1", minusRoot(1, -2, 1), 1.0);
       Testing.testEquals("Test 2", minusRoot(-1, 0, 1), 1.0);
-      Testing.testEquals("Test 3", minusRoot(-1, 3, -5), "NaN");
+      Testing.testEquals("Test 3", minusRoot(-1, 3, -5), Double.NaN);
 	}
 
 	public static String findRoots(double a, double b, double c){
@@ -128,14 +128,14 @@ public class Quadratic{
 		*/
       if (numRoots(a,b,c) == 0) return "";
       if (numRoots(a,b,c) == 1) return "x = "+ (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
-      else return "x = " + (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a) + " and x = " + (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
+      else return "x = " + (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a) + ", and x = " + (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	}
 
 	public static void testFindRoots(){
 		/*A test client, tests findRoots()
 		*/
       Testing.testEquals("Test 1", findRoots(1, -2, 1), "x = 1.0");
-      Testing.testEquals("Test 2", findRoots(-1, 0, 1), "x = -1.0 and x = 1.0");
+      Testing.testEquals("Test 2", findRoots(-1, 0, 1), "x = -1.0, and x = 1.0");
       Testing.testEquals("Test 3", findRoots(-1, 3, -5), "");
 	}
 
