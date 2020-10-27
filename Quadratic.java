@@ -91,17 +91,16 @@ double c){
 	}
 
 	public static double minusRoot(double a, double b, double c){
-		/*Find the "minus" root of the quadratic given a, b, c,i.e.
-		(-b - sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
+		/*Finds the "minus" root of the quadratic given a, b, c,i.e. 
+      (-b + sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
 		If there is no root return NaN (read more about NaN here)
-      Inputs:
-			double a: "a" in x = -b - (sqrt(b^2 - 4ac))/2a
-			double b: "b" in x = -b - (sqrt(b^2 - 4ac))/2a
-			double c: "c" in x = -b - (sqrt(b^2 - 4ac))/2a
+      
+      /*Inputs:
+			double a: "a" in y = (-b-sqrt((b^2-4ac))/2a
+         double b: "b" in y = (-b-sqrt((b^2-4ac))/2a
+			double c: "c" in y = (-b-sqrt((b^2-4ac))/2a
 		Outputs:
-			return: the "minus root of the quadratic given a,b,c
- 		*/
-      //if (numRoots(a, b, c) == 0) return "NaN";
+			return: the negative root given a, b, c   */
       return (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	
    }
@@ -115,7 +114,9 @@ double c){
 	}
 
 	public static String findRoots(double a, double b, double c){
-		/*Given a, b, and c, find the roots, if any, of the 				quadratic equation y = ax^2 + bx + c. Return a String 				containing this information, with the roots in order
+		/*Given a, b, and c, find the roots, if any, of the 
+      quadratic equation y = ax^2 + bx + c. Return a String 	
+      containing this information, with the roots in order
 		from smallest to greatest.
 
 		Must work for all possible values of a, b, and c
