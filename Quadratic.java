@@ -182,8 +182,8 @@ double c){
 	public static void testYVertex(){
 		/*A test client, tests yVertex().
 		*/
-      Testing.testEquals("Test 1", yVertex(1, -2, 1), 0);
-      Testing.testEquals("Test 2", yVertex(-1, 0, 1), 1);
+      Testing.testEquals("Test 1", yVertex(1, -2, 1), 0.0);
+      Testing.testEquals("Test 2", yVertex(-1, 0, 1), 1.0);
       Testing.testEquals("Test 3", yVertex(-1, 3, -5), -2.75);
 	}
 
