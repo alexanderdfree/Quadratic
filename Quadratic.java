@@ -126,9 +126,12 @@ public class Quadratic{
 		findRoots(1.0, -4.0, 4.0) -> "x = 2.0"
 		findRoots(2.5, 5.0, 4.0) -> ""
 		*/
+      if (a == 0 && b == 0 && c == 0) return "x = all values of x";
+      if (a == 0.0 && b == 0.0) return "";
+      if (a == 0) return "x = " + (-c)/b;
       if (numRoots(a,b,c) == 0) return "";
       if (numRoots(a,b,c) == 1) return "x = "+ (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
-      else return "x = " + (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a) + ", and x = " + (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
+      else return "x = " + (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a) + ", x = " + (-b-Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
 	}
 
 	public static void testFindRoots(){
