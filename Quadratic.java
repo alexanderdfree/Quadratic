@@ -31,7 +31,7 @@ double c){
 			double b: "b" in y = (b^2) - 4ac
 			double c: "c" in y = (b^2) - 4ac
 		Outputs:
-			return: the discriminants given a, b, c
+			return: the discriminant given a, b, c
       */
       return ((Math.pow(b, 2))-(4.0 * a *c));
 	}
@@ -49,11 +49,11 @@ double c){
 		/*Returns the number of roots given a, b, and c
       Inputs:
 			double x: the x-coordinate
-			double a: "a" in y = ax^2 + bx + c
-			double b: "b" in y = ax^2 + bx + c
-			double c: "c" in y = ax^2 + bx + c
+			double a: "a" in discriminant method
+			double b: "b" in discriminant method
+			double c: "c" in discriminant method
 		Outputs:
-			return: the y-coordinate at x given a, b, c
+			return: the number of real roots
 		*/
       if (discriminant(a,b,c) < 0) return 0;
       if (discriminant(a,b,c) == 0) return 1;
@@ -68,7 +68,8 @@ double c){
 	}
 
 	public static double plusRoot(double a, double b, double c){
-		/*Finds the "plus" root of the quadratic given a, b, c,i.e. 		(-b + sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
+		/*Finds the "plus" root of the quadratic given a, b, c,i.e. 
+      (-b + sqrt(b^2-4ac))/(2a) <- this is not proper Java syntax
 		If there is no root return NaN (read more about NaN here)
       //if (numRoots(a, b, c) == 0) return "NaN";*/
       return (-b+Math.sqrt(Math.pow(b, 2)-4*a*c))/(2*a);
