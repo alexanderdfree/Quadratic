@@ -14,6 +14,10 @@ double c){
 		Outputs:
 			return: the y-coordinate at x given a, b, c
 		*/
+      if ( a < 0 && x == Double.NEGATIVE_INFINITY) return Double.POSITIVE_INFINITY;
+      if ( a < 0 && x == Double.POSITIVE_INFINITY) return Double.NEGATIVE_INFINITY;
+      if ( a > 0 && x == Double.POSITIVE_INFINITY) return Double.POSITIVE_INFINITY;
+      if ( a > 0 && x == Double.NEGATIVE_INFINITY) return Double.NEGATIVE_INFINITY;
       return (a*Math.pow(x, 2)) + (b*x) + c;
 	}
 
